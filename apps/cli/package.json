@@ -14,8 +14,8 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@ai-walkthrough/core": "workspace:*",
-    "@ai-walkthrough/shared": "workspace:*",
+    "@ai-walkthrough/core": "*",
+    "@ai-walkthrough/shared": "*",
     "commander": "^11.1.0"
   },
   "devDependencies": {
