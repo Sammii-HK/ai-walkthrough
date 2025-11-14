@@ -1,10 +1,9 @@
 apps/cli
-packages/core/src/__mocks__
-packages/core/src/__tests__
-packages/core/src/test
+packages
 tests
 scripts
 prompts
 *.md
 !README.md
+!apps/web/README.md
 
