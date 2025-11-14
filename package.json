@@ -13,7 +13,8 @@
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest --coverage",
-    "test:run": "vitest run"
+    "test:run": "vitest run",
+    "vercel-build": "cd apps/web && pnpm build"
   },
   "devDependencies": {
     "@types/node": "^20.10.0",
@@ -27,19 +28,6 @@
     "vitest": "^1.1.0"
   },
   "packageManager": "pnpm@8.15.0",
-  "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
-    "type-check": "turbo run type-check",
-    "clean": "turbo run clean && rm -rf node_modules",
-    "test": "vitest",
-    "test:ui": "vitest --ui",
-    "test:coverage": "vitest --coverage",
-    "test:run": "vitest run",
-    "vercel-build": "cd apps/web && pnpm build"
-  },
   "engines": {
     "node": ">=18.0.0",
     "pnpm": ">=8.0.0"
