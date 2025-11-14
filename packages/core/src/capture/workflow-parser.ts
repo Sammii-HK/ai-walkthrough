@@ -19,7 +19,7 @@ export class WorkflowParser {
     });
   }
 
-  extractUIElements(workflow: Workflow): string[] {
+  extractUIElements(_workflow: Workflow): string[] {
     // TODO: Extract UI element names/text for script generation
     return [];
   }

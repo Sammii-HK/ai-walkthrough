@@ -1,6 +1,9 @@
 import { NextResponse } from 'next/server';
-import { MockVoiceoverGenerator } from '@ai-walkthrough/core/__mocks__/mock-voiceover-generator';
-import type { ScriptSegment, VoiceoverConfig } from '@ai-walkthrough/core';
+import { 
+  MockVoiceoverGenerator,
+  type ScriptSegment,
+  type VoiceoverConfig
+} from '@ai-walkthrough/core';
 
 /**
  * POST /api/test/voiceover

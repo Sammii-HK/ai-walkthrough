@@ -6,7 +6,7 @@ import type { ScriptSegment, VoiceoverConfig } from '../types';
  * No API costs - zero cost
  */
 export class MockVoiceoverGenerator {
-  constructor(private config: VoiceoverConfig) {}
+  constructor(_config: VoiceoverConfig) {}
 
   /**
    * Generate mock audio buffer
@@ -53,7 +53,7 @@ export class MockVoiceoverGenerator {
     return this.generateVoiceover([segment]);
   }
 
-  async checkQuality(audioBuffer: Buffer): Promise<{
+  async checkQuality(_audioBuffer: Buffer): Promise<{
     score: number;
     issues: string[];
   }> {

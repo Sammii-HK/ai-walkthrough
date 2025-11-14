@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { TestDataFactory } from '@ai-walkthrough/core/test/test-data-factory';
+import { TestDataFactory } from '@ai-walkthrough/core';
 
 /**
  * GET /api/test/workflow

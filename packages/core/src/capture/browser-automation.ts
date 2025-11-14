@@ -130,7 +130,7 @@ export class BrowserAutomation {
           }
           break;
         case 'scroll':
-          await this.page.evaluate(() => window.scrollBy(0, 500));
+          await this.page.evaluate(() => (globalThis as any).window.scrollBy(0, 500));
           await this.captureStep('scroll');
           break;
         case 'wait':
@@ -163,7 +163,7 @@ export class BrowserAutomation {
 
     const timestamp = (Date.now() - this.startTime) / 1000;
     const domSnapshot = await this.page.content();
-    const screenshot = await this.page.screenshot({ encoding: 'base64' });
+    const screenshot = await this.page.screenshot();
 
     // Get element coordinates if target exists
     let coordinates: { x: number; y: number } | undefined;

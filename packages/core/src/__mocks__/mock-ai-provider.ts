@@ -7,9 +7,9 @@ import type { AIConfig } from '../types';
  * No real API calls - zero cost
  */
 export class MockAIProvider implements AIProvider {
-  constructor(private config: AIConfig) {}
+  constructor(_config: AIConfig) {}
 
-  async generateText(prompt: string, options?: AIProviderOptions): Promise<string> {
+  async generateText(prompt: string, _options?: AIProviderOptions): Promise<string> {
     // Simulate network delay
     await new Promise((resolve) => setTimeout(resolve, 50));
 
@@ -95,7 +95,7 @@ export class MockAIProvider implements AIProvider {
       {
         startTime: 10,
         endTime: 15,
-        text: 'Once logged in, you'll see your personalized dashboard with all your data.',
+        text: "Once logged in, you'll see your personalized dashboard with all your data.",
         emphasis: ['personalized', 'dashboard'],
       },
     ]);

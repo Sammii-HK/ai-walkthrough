@@ -27,7 +27,7 @@ export class CompositionEngine {
    */
   async composeVideo(
     videoPath: string,
-    workflow: Workflow,
+    _workflow: Workflow,
     script: ScriptSegment[],
     overlays: TextOverlay[],
     outputPath: string
@@ -102,7 +102,7 @@ export class CompositionEngine {
    * Generate basic overlays based on script segments
    */
   private generateBasicOverlays(
-    workflow: Workflow,
+    _workflow: Workflow,
     script: ScriptSegment[]
   ): TextOverlay[] {
     const overlays: TextOverlay[] = [];

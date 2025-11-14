@@ -95,7 +95,7 @@ export class ScriptGenerator {
   /**
    * Parse analysis text into structured format
    */
-  private parseAnalysisText(text: string): {
+  private parseAnalysisText(_text: string): {
     features: string[];
     journey: Array<{ timestamp: number; description: string }>;
     highlights: Array<{ timestamp: number; description: string }>;

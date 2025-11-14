@@ -24,8 +24,6 @@ export class VideoEditor {
       const fontSize = overlay.style.fontSize;
       const fontColor = overlay.style.color;
       const bgColor = overlay.style.backgroundColor || 'transparent';
-      const fontFamily = overlay.style.fontFamily || 'Arial';
-
       // Escape text for FFmpeg
       const escapedText = overlay.text.replace(/'/g, "\\'").replace(/:/g, '\\:');
 
@@ -71,15 +69,13 @@ export class VideoEditor {
     // Build complex filter for multiple overlays
     const filters: string[] = [];
     
-    overlays.forEach((overlay, index) => {
+    overlays.forEach((overlay) => {
       const startTime = overlay.startTime;
-      const duration = overlay.endTime - overlay.startTime;
       const x = overlay.position.x;
       const y = overlay.position.y;
       const fontSize = overlay.style.fontSize;
       const fontColor = overlay.style.color;
       const bgColor = overlay.style.backgroundColor || 'transparent';
-      const fontFamily = overlay.style.fontFamily || 'Arial';
       const escapedText = overlay.text.replace(/'/g, "\\'").replace(/:/g, '\\:');
 
       let filter = `drawtext=text='${escapedText}':fontsize=${fontSize}:fontcolor=${fontColor}`;

@@ -1,10 +1,13 @@
 import { NextResponse } from 'next/server';
-import { MockAIProvider } from '@ai-walkthrough/core/__mocks__/mock-ai-provider';
-import { MockVoiceoverGenerator } from '@ai-walkthrough/core/__mocks__/mock-voiceover-generator';
-import { MockVideoEditor } from '@ai-walkthrough/core/__mocks__/mock-video-editor';
-import { ScriptGenerator, CompositionEngine } from '@ai-walkthrough/core';
-import { TestDataFactory } from '@ai-walkthrough/core/test/test-data-factory';
-import type { Workflow } from '@ai-walkthrough/core';
+import { 
+  MockAIProvider,
+  MockVoiceoverGenerator,
+  MockVideoEditor,
+  ScriptGenerator,
+  CompositionEngine,
+  TestDataFactory,
+  type Workflow
+} from '@ai-walkthrough/core';
 
 /**
  * POST /api/test/pipeline

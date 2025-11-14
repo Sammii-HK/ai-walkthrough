@@ -1,7 +1,10 @@
 import { NextResponse } from 'next/server';
-import { createAIProvider, ScriptGenerator } from '@ai-walkthrough/core';
-import { MockAIProvider } from '@ai-walkthrough/core/__mocks__/mock-ai-provider';
-import { useMocks } from '@ai-walkthrough/core/test/test-env';
+import { 
+  createAIProvider,
+  ScriptGenerator,
+  MockAIProvider,
+  useMocks
+} from '@ai-walkthrough/core';
 import { readFileSync, existsSync } from 'fs';
 import { join } from 'path';
 
@@ -13,14 +16,15 @@ import { join } from 'path';
  */
 export async function POST(
   request: Request,
-  { params }: { params: { id: string } }
+  { params: _params }: { params: Promise<{ id: string }> }
 ) {
   try {
     const body = await request.json();
     const { tone, style, audience } = body;
+    const { id } = await _params;
 
     // Load workflow (in production, this would be from database/storage)
-    const workflowPath = join(process.cwd(), 'recordings', `${params.id}.json`);
+    const workflowPath = join(process.cwd(), 'recordings', `${id}.json`);
     
     if (!existsSync(workflowPath)) {
       return NextResponse.json(

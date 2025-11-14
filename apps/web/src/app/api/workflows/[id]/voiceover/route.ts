@@ -1,8 +1,11 @@
 import { NextResponse } from 'next/server';
-import { VoiceoverGenerator } from '@ai-walkthrough/core';
-import { MockVoiceoverGenerator } from '@ai-walkthrough/core/__mocks__/mock-voiceover-generator';
-import { useMocks } from '@ai-walkthrough/core/test/test-env';
-import type { ScriptSegment, VoiceoverConfig } from '@ai-walkthrough/core';
+import { 
+  VoiceoverGenerator,
+  MockVoiceoverGenerator,
+  useMocks,
+  type ScriptSegment,
+  type VoiceoverConfig
+} from '@ai-walkthrough/core';
 
 /**
  * POST /api/workflows/[id]/voiceover
@@ -12,7 +15,7 @@ import type { ScriptSegment, VoiceoverConfig } from '@ai-walkthrough/core';
  */
 export async function POST(
   request: Request,
-  { params }: { params: { id: string } }
+  _context: { params: Promise<{ id: string }> }
 ) {
   try {
     const body = await request.json();

@@ -107,7 +107,7 @@ export class AnthropicProvider implements AIProvider {
   ): Promise<string> {
     const model = options?.model ?? this.config.model ?? 'claude-3-opus-20240229';
 
-    const response = await this.client.messages.create({
+    const response = await (this.client as any).messages.create({
       model,
       max_tokens: options?.maxTokens ?? 4096,
       temperature: options?.temperature ?? 0.7,
@@ -133,7 +133,7 @@ export class AnthropicProvider implements AIProvider {
   ): AsyncGenerator<string> {
     const model = options?.model ?? this.config.model ?? 'claude-3-opus-20240229';
 
-    const stream = await this.client.messages.stream({
+    const stream = await (this.client as any).messages.stream({
       model,
       max_tokens: options?.maxTokens ?? 4096,
       temperature: options?.temperature ?? 0.7,

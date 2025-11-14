@@ -143,7 +143,7 @@ export class VoiceoverGenerator {
   /**
    * Generate TTS using Google Cloud TTS
    */
-  private async generateGoogleTTS(text: string): Promise<Buffer> {
+  private async generateGoogleTTS(_text: string): Promise<Buffer> {
     // Google Cloud TTS implementation
     // Requires GOOGLE_APPLICATION_CREDENTIALS environment variable
     throw new Error('Google Cloud TTS not yet implemented');

@@ -1,4 +1,4 @@
-import type { Workflow, WorkflowStep } from '../types';
+import type { WorkflowStep } from '../types';
 
 /**
  * Screen recording module
@@ -20,7 +20,7 @@ export class ScreenRecorder {
     throw new Error('Not implemented');
   }
 
-  async extractMetadata(videoBlob: Blob): Promise<WorkflowStep[]> {
+  async extractMetadata(_videoBlob: Blob): Promise<WorkflowStep[]> {
     // TODO: Extract interaction metadata from recording
     throw new Error('Not implemented');
   }

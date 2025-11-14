@@ -1,8 +1,12 @@
 import { NextResponse } from 'next/server';
-import { MockVideoEditor } from '@ai-walkthrough/core/__mocks__/mock-video-editor';
-import { MockVoiceoverGenerator } from '@ai-walkthrough/core/__mocks__/mock-voiceover-generator';
-import { CompositionEngine } from '@ai-walkthrough/core';
-import type { Workflow, ScriptSegment, TextOverlay, VideoConfig } from '@ai-walkthrough/core';
+import { 
+  MockVideoEditor,
+  MockVoiceoverGenerator,
+  CompositionEngine,
+  type Workflow,
+  type ScriptSegment,
+  type VideoConfig
+} from '@ai-walkthrough/core';
 
 /**
  * POST /api/test/video/process
@@ -50,7 +54,6 @@ export async function POST(request: Request) {
       ));
 
     // Mock video path
-    const mockVideoPath = './test-video.webm';
     const outputPath = './test-output.mp4';
 
     // This would normally compose the video, but with mocks it just validates

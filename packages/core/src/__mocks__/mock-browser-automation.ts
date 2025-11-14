@@ -10,7 +10,7 @@ export class MockBrowserAutomation {
   private steps: WorkflowStep[] = [];
   private startTime: number = 0;
 
-  async initialize(options?: {
+  async initialize(_options?: {
     headless?: boolean;
     viewport?: { width: number; height: number };
   }): Promise<void> {

@@ -1,7 +1,9 @@
 import { NextResponse } from 'next/server';
-import { MockAIProvider } from '@ai-walkthrough/core/__mocks__/mock-ai-provider';
-import { ScriptGenerator } from '@ai-walkthrough/core';
-import type { Workflow } from '@ai-walkthrough/core';
+import { 
+  MockAIProvider,
+  ScriptGenerator,
+  type Workflow
+} from '@ai-walkthrough/core';
 
 /**
  * POST /api/test/script

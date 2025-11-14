@@ -14,18 +14,18 @@
     "test:run": "vitest run"
   },
   "dependencies": {
-    "@ai-walkthrough/shared": "workspace:*",
-    "playwright": "^1.40.1",
-    "uuid": "^9.0.1",
-    "openai": "^4.20.1",
+    "@ai-walkthrough/shared": "*",
     "@anthropic-ai/sdk": "^0.9.1",
     "axios": "^1.6.2",
-    "fluent-ffmpeg": "^2.1.2"
+    "fluent-ffmpeg": "^2.1.2",
+    "openai": "^4.20.1",
+    "playwright": "^1.40.1",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
-    "@types/node": "^20.10.0",
     "@types/fluent-ffmpeg": "^2.1.24",
+    "@types/node": "^20.10.0",
+    "@types/uuid": "^10.0.0",
     "typescript": "^5.3.3"
   }
 }
-

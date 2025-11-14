@@ -1,7 +1,9 @@
 import { NextResponse } from 'next/server';
-import { BrowserAutomation } from '@ai-walkthrough/core';
-import { MockBrowserAutomation } from '@ai-walkthrough/core/__mocks__/mock-browser-automation';
-import { useMocks } from '@ai-walkthrough/core/test/test-env';
+import { 
+  BrowserAutomation,
+  MockBrowserAutomation,
+  useMocks
+} from '@ai-walkthrough/core';
 
 /**
  * POST /api/workflows/record

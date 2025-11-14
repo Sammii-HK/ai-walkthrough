@@ -122,7 +122,7 @@ export class MockVideoEditor {
     await new Promise((resolve) => setTimeout(resolve, 50));
   }
 
-  async getVideoDuration(videoPath: string): Promise<number> {
+  async getVideoDuration(_videoPath: string): Promise<number> {
     // Mock duration - return a fixed value
     return 15.5;
   }
